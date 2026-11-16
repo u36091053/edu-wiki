@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>教育名詞小百科</title>
+  <meta name="description" content="用固定格式、白話解釋的繁體中文教育學名詞 Wiki：定義、提出者、課堂例子、常見誤解與相關名詞。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index" data-root="">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span class="logo-mark">教</span>教育名詞小百科</a>
+      <nav class="site-nav">
+        <a href="#terms">全部名詞</a>
+        <a href="#wanted">待撰寫</a>
+        <a href="#about">關於</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>教育名詞小百科</h1>
+      <p>每個教育名詞一頁，固定回答五件事：它是什麼、誰提出的、在課堂上長什麼樣子、大家常誤會什麼、還跟哪些名詞有關。</p>
+      <div class="stats">
+        <div><strong id="stat-terms">0</strong>已收錄名詞</div>
+        <div><strong id="stat-cats">0</strong>分類</div>
+        <div><strong id="stat-wanted">0</strong>待撰寫名詞</div>
+      </div>
+      <input id="search" class="search-box" type="search" placeholder="搜尋名詞、英文、提出者……例如：鷹架、Vygotsky、評量" aria-label="搜尋名詞">
+    </section>
+
+    <section id="terms">
+      <div id="category-chips" class="chips" role="group" aria-label="依分類篩選"></div>
+      <div id="card-grid" class="card-grid"></div>
+    </section>
+
+    <section id="wanted">
+      <h2 class="section-title">待撰寫名詞</h2>
+      <p class="section-desc">已收錄名詞的「相關名詞」中、還沒有頁面的名詞會自動列在這裡。數字是被提到的次數，越常被提到越優先撰寫。</p>
+      <ul id="wanted-list" class="wanted-list"></ul>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">關於這個專案</h2>
+      <div class="about-box">
+        <p>這是一個用 <code>CLAUDE.md</code> 規則與 AI 協作建立的 Wiki。每個名詞頁都依照同一份模板與寫作規範，新增名詞的流程是：</p>
+        <ol>
+          <li>從 <code>templates/term-template.html</code> 複製新頁面</li>
+          <li>依固定的 7 個區塊撰寫內容</li>
+          <li>在 <code>data/terms.js</code> 登錄，首頁卡片、搜尋與連結就會自動更新</li>
+          <li>執行 <code>scripts/check_terms.py</code> 確認格式正確</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>教育名詞小百科・以 CLAUDE.md 規則與 AI 協作撰寫</p>
+      <p>內容供學習參考，引用前請查閱原始文獻。</p>
+    </div>
+  </footer>
+
+  <script src="data/terms.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
