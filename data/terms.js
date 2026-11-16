@@ -64,5 +64,16 @@ window.TERMS = [
     "year": "2007",
     "related": ["主動學習", "同儕教學", "混成學習", "形成性評量", "自主學習"],
     "added": "2026-11-16"
+  },
+  {
+    "slug": "constructivism",
+    "zh": "建構主義",
+    "en": "Constructivism",
+    "category": "學習理論",
+    "summary": "知識不是被動接收的，而是學習者以既有經驗為基礎，主動建構出意義的學習觀點。",
+    "proposer": "Jean Piaget（皮亞傑）、Lev Vygotsky（維高斯基）",
+    "year": "1920～1930 年代",
+    "related": ["鷹架理論", "近側發展區", "認知發展理論", "社會文化理論", "探究式教學", "迷思概念"],
+    "added": "2026-11-16"
   }
 ];
